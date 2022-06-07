@@ -46,6 +46,12 @@ namespace UI.Desktop
 
         private void btnSetExactChar_Click(object sender, EventArgs e)
         {
+            if (this.nudMinPasswordLength.Value > this.nudMaxPasswordLength.Value)
+            {
+                MessageBox.Show("Min Password Length has to be equal to or greater than Max Password Length.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FormExactChar form = new FormExactChar((int)nudMaxPasswordLength.Value);
             form.ShowDialog();
         }

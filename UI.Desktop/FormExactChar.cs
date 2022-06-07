@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,19 @@ namespace UI.Desktop
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            
+            List<ExactChar> list = new List<ExactChar>();
+
+            var controls = this.flowLayoutPanel.Controls;
+            int i = 0;
+            foreach (var c in controls)
+            {
+                var subPanel = (FlowLayoutPanel)c;
+                var tb = subPanel.Controls.Find(string.Format("txtExactChar{0}", i++), false).FirstOrDefault();
+                if (tb is TextBox)
+                {
+                    list.Add(new ExactChar((int)tb.Tag, tb.Text));
+                }
+            }
         }
 
         private void setup(int Count)
@@ -33,13 +46,14 @@ namespace UI.Desktop
                 FlowLayoutPanel subPanel = new FlowLayoutPanel();
 
                 TextBox tb = new TextBox();
-                tb.MaxLength = 1;
                 tb.Size = new System.Drawing.Size(35, 35);
                 tb.Location = new System.Drawing.Point(10, 40);
                 tb.TextAlign = HorizontalAlignment.Center;
                 tb.Multiline = true;
                 tb.Margin = new Padding(0, tb.Margin.Top, tb.Margin.Right, tb.Margin.Bottom);
-                tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                tb.Tag = i;
+                tb.Name = string.Format("txtExactChar{0}", i);
 
                 Label lbl = new Label();
                 lbl.Text = (i + 1).ToString();
@@ -52,15 +66,7 @@ namespace UI.Desktop
                 subPanel.Controls.Add(tb);
 
                 subPanel.BackColor = Color.Red;
-
-                if (i % 10 == 0)
-                {
-                    subPanel.Location = new Point(i + 10, 0);
-                }
-                else
-                {
-                    subPanel.Location = new Point(i + 1, 0);
-                }
+                subPanel.Location = new Point(i + 1, 0);
                 
                 subPanel.Size = new System.Drawing.Size(54, 40);
 
