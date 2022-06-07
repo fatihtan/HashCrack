@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI.Desktop.Layouts;
 
 namespace UI.Desktop
 {
@@ -21,20 +22,16 @@ namespace UI.Desktop
         private void cboxChars_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox cb = (CheckBox)sender;
-            TextBox tb = (TextBox)this.Controls.Find(cb.Tag.ToString(), false).FirstOrDefault();
-            if (tb == null)
+            Control control = (Control)this.Controls.Find(cb.Tag.ToString(), false).FirstOrDefault();
+            if (control == null)
                 return;
 
-            tb.Enabled = cb.Checked;
+            control.Enabled = cb.Checked;
 
-            if (cb == cboxIncludeSpace && tb.Enabled)
-            {
-                tb.Text = "Space is included";
-            }
-            else if (cb == cboxIncludeSpace && !tb.Enabled)
-            {
-                tb.Text = "Space is NOT included";
-            }
+            if (cb == cboxIncludeSpace && control.Enabled)
+                control.Text = "Space is included";
+            else if (cb == cboxIncludeSpace && !control.Enabled)
+                control.Text = "Space is NOT included";
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -47,6 +44,10 @@ namespace UI.Desktop
             cboxEncryptionAlgorithm.DataSource = TypeService.GetList(TK.TKEncrytionAlgorithm.Undefined);
         }
 
-
+        private void btnSetExactChar_Click(object sender, EventArgs e)
+        {
+            FormExactChar form = new FormExactChar((int)nudMaxPasswordLength.Value);
+            form.ShowDialog();
+        }
     }
 }

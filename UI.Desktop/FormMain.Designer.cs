@@ -47,6 +47,9 @@
             this.nudMinPasswordLength = new System.Windows.Forms.NumericUpDown();
             this.nudMaxPasswordLength = new System.Windows.Forms.NumericUpDown();
             this.lblMaxPasswordLength = new System.Windows.Forms.Label();
+            this.cboxExactChar = new System.Windows.Forms.CheckBox();
+            this.txtExactChar = new System.Windows.Forms.TextBox();
+            this.btnSetExactChar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinPasswordLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxPasswordLength)).BeginInit();
             this.SuspendLayout();
@@ -54,27 +57,27 @@
             // txtCharsBigAZ
             // 
             this.txtCharsBigAZ.Enabled = false;
-            this.txtCharsBigAZ.Location = new System.Drawing.Point(201, 179);
+            this.txtCharsBigAZ.Location = new System.Drawing.Point(160, 219);
             this.txtCharsBigAZ.Name = "txtCharsBigAZ";
             this.txtCharsBigAZ.ReadOnly = true;
-            this.txtCharsBigAZ.Size = new System.Drawing.Size(419, 20);
+            this.txtCharsBigAZ.Size = new System.Drawing.Size(618, 20);
             this.txtCharsBigAZ.TabIndex = 0;
             this.txtCharsBigAZ.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             // 
             // txtCharsSmallAZ
             // 
             this.txtCharsSmallAZ.Enabled = false;
-            this.txtCharsSmallAZ.Location = new System.Drawing.Point(201, 205);
+            this.txtCharsSmallAZ.Location = new System.Drawing.Point(160, 245);
             this.txtCharsSmallAZ.Name = "txtCharsSmallAZ";
             this.txtCharsSmallAZ.ReadOnly = true;
-            this.txtCharsSmallAZ.Size = new System.Drawing.Size(419, 20);
+            this.txtCharsSmallAZ.Size = new System.Drawing.Size(618, 20);
             this.txtCharsSmallAZ.TabIndex = 1;
             this.txtCharsSmallAZ.Text = "abcdefghijklmnopqrstuvwxyz";
             // 
             // cboxCharsBigAZ
             // 
             this.cboxCharsBigAZ.AutoSize = true;
-            this.cboxCharsBigAZ.Location = new System.Drawing.Point(82, 181);
+            this.cboxCharsBigAZ.Location = new System.Drawing.Point(41, 221);
             this.cboxCharsBigAZ.Name = "cboxCharsBigAZ";
             this.cboxCharsBigAZ.Size = new System.Drawing.Size(43, 17);
             this.cboxCharsBigAZ.TabIndex = 2;
@@ -86,7 +89,7 @@
             // cboxCharsSmallAZ
             // 
             this.cboxCharsSmallAZ.AutoSize = true;
-            this.cboxCharsSmallAZ.Location = new System.Drawing.Point(82, 207);
+            this.cboxCharsSmallAZ.Location = new System.Drawing.Point(41, 247);
             this.cboxCharsSmallAZ.Name = "cboxCharsSmallAZ";
             this.cboxCharsSmallAZ.Size = new System.Drawing.Size(40, 17);
             this.cboxCharsSmallAZ.TabIndex = 3;
@@ -98,7 +101,7 @@
             // cboxCharsNumbers
             // 
             this.cboxCharsNumbers.AutoSize = true;
-            this.cboxCharsNumbers.Location = new System.Drawing.Point(82, 233);
+            this.cboxCharsNumbers.Location = new System.Drawing.Point(41, 273);
             this.cboxCharsNumbers.Name = "cboxCharsNumbers";
             this.cboxCharsNumbers.Size = new System.Drawing.Size(68, 17);
             this.cboxCharsNumbers.TabIndex = 5;
@@ -110,17 +113,17 @@
             // txtCharsNumbers
             // 
             this.txtCharsNumbers.Enabled = false;
-            this.txtCharsNumbers.Location = new System.Drawing.Point(201, 231);
+            this.txtCharsNumbers.Location = new System.Drawing.Point(160, 271);
             this.txtCharsNumbers.Name = "txtCharsNumbers";
             this.txtCharsNumbers.ReadOnly = true;
-            this.txtCharsNumbers.Size = new System.Drawing.Size(419, 20);
+            this.txtCharsNumbers.Size = new System.Drawing.Size(618, 20);
             this.txtCharsNumbers.TabIndex = 4;
             this.txtCharsNumbers.Text = "0123456789";
             // 
             // cboxCharsAdditional
             // 
             this.cboxCharsAdditional.AutoSize = true;
-            this.cboxCharsAdditional.Location = new System.Drawing.Point(82, 285);
+            this.cboxCharsAdditional.Location = new System.Drawing.Point(41, 325);
             this.cboxCharsAdditional.Name = "cboxCharsAdditional";
             this.cboxCharsAdditional.Size = new System.Drawing.Size(102, 17);
             this.cboxCharsAdditional.TabIndex = 7;
@@ -132,9 +135,9 @@
             // txtCharsAdditional
             // 
             this.txtCharsAdditional.Enabled = false;
-            this.txtCharsAdditional.Location = new System.Drawing.Point(201, 283);
+            this.txtCharsAdditional.Location = new System.Drawing.Point(160, 323);
             this.txtCharsAdditional.Name = "txtCharsAdditional";
-            this.txtCharsAdditional.Size = new System.Drawing.Size(419, 20);
+            this.txtCharsAdditional.Size = new System.Drawing.Size(618, 20);
             this.txtCharsAdditional.TabIndex = 6;
             // 
             // btnStart
@@ -142,9 +145,9 @@
             this.btnStart.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Location = new System.Drawing.Point(201, 320);
+            this.btnStart.Location = new System.Drawing.Point(160, 360);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(419, 32);
+            this.btnStart.Size = new System.Drawing.Size(618, 32);
             this.btnStart.TabIndex = 8;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -154,22 +157,22 @@
             // 
             this.cboxEncryptionAlgorithm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxEncryptionAlgorithm.FormattingEnabled = true;
-            this.cboxEncryptionAlgorithm.Location = new System.Drawing.Point(201, 73);
+            this.cboxEncryptionAlgorithm.Location = new System.Drawing.Point(160, 37);
             this.cboxEncryptionAlgorithm.Name = "cboxEncryptionAlgorithm";
-            this.cboxEncryptionAlgorithm.Size = new System.Drawing.Size(419, 21);
+            this.cboxEncryptionAlgorithm.Size = new System.Drawing.Size(618, 21);
             this.cboxEncryptionAlgorithm.TabIndex = 9;
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(201, 100);
+            this.txtOutput.Location = new System.Drawing.Point(160, 64);
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(419, 20);
+            this.txtOutput.Size = new System.Drawing.Size(618, 20);
             this.txtOutput.TabIndex = 10;
             // 
             // lblEncryptionAlgorithm
             // 
             this.lblEncryptionAlgorithm.AutoSize = true;
-            this.lblEncryptionAlgorithm.Location = new System.Drawing.Point(79, 76);
+            this.lblEncryptionAlgorithm.Location = new System.Drawing.Point(38, 40);
             this.lblEncryptionAlgorithm.Name = "lblEncryptionAlgorithm";
             this.lblEncryptionAlgorithm.Size = new System.Drawing.Size(103, 13);
             this.lblEncryptionAlgorithm.TabIndex = 11;
@@ -178,7 +181,7 @@
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(79, 103);
+            this.lblOutput.Location = new System.Drawing.Point(38, 67);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(39, 13);
             this.lblOutput.TabIndex = 12;
@@ -187,7 +190,7 @@
             // cboxIncludeSpace
             // 
             this.cboxIncludeSpace.AutoSize = true;
-            this.cboxIncludeSpace.Location = new System.Drawing.Point(82, 259);
+            this.cboxIncludeSpace.Location = new System.Drawing.Point(41, 299);
             this.cboxIncludeSpace.Name = "cboxIncludeSpace";
             this.cboxIncludeSpace.Size = new System.Drawing.Size(95, 17);
             this.cboxIncludeSpace.TabIndex = 13;
@@ -199,17 +202,17 @@
             // txtCharsSpace
             // 
             this.txtCharsSpace.Enabled = false;
-            this.txtCharsSpace.Location = new System.Drawing.Point(201, 257);
+            this.txtCharsSpace.Location = new System.Drawing.Point(160, 297);
             this.txtCharsSpace.Name = "txtCharsSpace";
             this.txtCharsSpace.ReadOnly = true;
-            this.txtCharsSpace.Size = new System.Drawing.Size(419, 20);
+            this.txtCharsSpace.Size = new System.Drawing.Size(618, 20);
             this.txtCharsSpace.TabIndex = 14;
             this.txtCharsSpace.Text = "Space is NOT included";
             // 
             // lblMinPasswordLength
             // 
             this.lblMinPasswordLength.AutoSize = true;
-            this.lblMinPasswordLength.Location = new System.Drawing.Point(79, 129);
+            this.lblMinPasswordLength.Location = new System.Drawing.Point(38, 93);
             this.lblMinPasswordLength.Name = "lblMinPasswordLength";
             this.lblMinPasswordLength.Size = new System.Drawing.Size(109, 13);
             this.lblMinPasswordLength.TabIndex = 16;
@@ -217,7 +220,7 @@
             // 
             // nudMinPasswordLength
             // 
-            this.nudMinPasswordLength.Location = new System.Drawing.Point(201, 127);
+            this.nudMinPasswordLength.Location = new System.Drawing.Point(160, 91);
             this.nudMinPasswordLength.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -229,7 +232,7 @@
             0,
             0});
             this.nudMinPasswordLength.Name = "nudMinPasswordLength";
-            this.nudMinPasswordLength.Size = new System.Drawing.Size(419, 20);
+            this.nudMinPasswordLength.Size = new System.Drawing.Size(618, 20);
             this.nudMinPasswordLength.TabIndex = 17;
             this.nudMinPasswordLength.Value = new decimal(new int[] {
             1,
@@ -239,7 +242,7 @@
             // 
             // nudMaxPasswordLength
             // 
-            this.nudMaxPasswordLength.Location = new System.Drawing.Point(201, 153);
+            this.nudMaxPasswordLength.Location = new System.Drawing.Point(160, 117);
             this.nudMaxPasswordLength.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -251,7 +254,7 @@
             0,
             0});
             this.nudMaxPasswordLength.Name = "nudMaxPasswordLength";
-            this.nudMaxPasswordLength.Size = new System.Drawing.Size(419, 20);
+            this.nudMaxPasswordLength.Size = new System.Drawing.Size(618, 20);
             this.nudMaxPasswordLength.TabIndex = 19;
             this.nudMaxPasswordLength.Value = new decimal(new int[] {
             10,
@@ -262,18 +265,52 @@
             // lblMaxPasswordLength
             // 
             this.lblMaxPasswordLength.AutoSize = true;
-            this.lblMaxPasswordLength.Location = new System.Drawing.Point(79, 155);
+            this.lblMaxPasswordLength.Location = new System.Drawing.Point(38, 119);
             this.lblMaxPasswordLength.Name = "lblMaxPasswordLength";
             this.lblMaxPasswordLength.Size = new System.Drawing.Size(112, 13);
             this.lblMaxPasswordLength.TabIndex = 18;
             this.lblMaxPasswordLength.Text = "Max Password Length";
+            // 
+            // cboxExactChar
+            // 
+            this.cboxExactChar.AutoSize = true;
+            this.cboxExactChar.Location = new System.Drawing.Point(41, 147);
+            this.cboxExactChar.Name = "cboxExactChar";
+            this.cboxExactChar.Size = new System.Drawing.Size(78, 17);
+            this.cboxExactChar.TabIndex = 20;
+            this.cboxExactChar.Tag = "btnSetExactChar";
+            this.cboxExactChar.Text = "Exact Char";
+            this.cboxExactChar.UseVisualStyleBackColor = true;
+            this.cboxExactChar.CheckedChanged += new System.EventHandler(this.cboxChars_CheckedChanged);
+            // 
+            // txtExactChar
+            // 
+            this.txtExactChar.Location = new System.Drawing.Point(255, 145);
+            this.txtExactChar.Name = "txtExactChar";
+            this.txtExactChar.ReadOnly = true;
+            this.txtExactChar.Size = new System.Drawing.Size(523, 20);
+            this.txtExactChar.TabIndex = 21;
+            // 
+            // btnSetExactChar
+            // 
+            this.btnSetExactChar.Enabled = false;
+            this.btnSetExactChar.Location = new System.Drawing.Point(160, 143);
+            this.btnSetExactChar.Name = "btnSetExactChar";
+            this.btnSetExactChar.Size = new System.Drawing.Size(89, 23);
+            this.btnSetExactChar.TabIndex = 22;
+            this.btnSetExactChar.Text = "Set";
+            this.btnSetExactChar.UseVisualStyleBackColor = true;
+            this.btnSetExactChar.Click += new System.EventHandler(this.btnSetExactChar_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(706, 482);
+            this.ClientSize = new System.Drawing.Size(817, 602);
+            this.Controls.Add(this.btnSetExactChar);
+            this.Controls.Add(this.txtExactChar);
+            this.Controls.Add(this.cboxExactChar);
             this.Controls.Add(this.nudMaxPasswordLength);
             this.Controls.Add(this.lblMaxPasswordLength);
             this.Controls.Add(this.nudMinPasswordLength);
@@ -326,6 +363,9 @@
         private System.Windows.Forms.NumericUpDown nudMinPasswordLength;
         private System.Windows.Forms.NumericUpDown nudMaxPasswordLength;
         private System.Windows.Forms.Label lblMaxPasswordLength;
+        private System.Windows.Forms.CheckBox cboxExactChar;
+        private System.Windows.Forms.TextBox txtExactChar;
+        private System.Windows.Forms.Button btnSetExactChar;
     }
 }
 

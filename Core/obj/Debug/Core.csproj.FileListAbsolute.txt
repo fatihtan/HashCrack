@@ -2,3 +2,8 @@ C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\Core\bin\De
 C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\Core\bin\Debug\Core.pdb
 C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\Core\obj\Debug\Core.dll
 C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\Core\obj\Debug\Core.pdb
+C:\Users\FT\Documents\GitHub\HashCrack\Core\bin\Debug\Core.dll
+C:\Users\FT\Documents\GitHub\HashCrack\Core\bin\Debug\Core.pdb
+C:\Users\FT\Documents\GitHub\HashCrack\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+C:\Users\FT\Documents\GitHub\HashCrack\Core\obj\Debug\Core.dll
+C:\Users\FT\Documents\GitHub\HashCrack\Core\obj\Debug\Core.pdb
