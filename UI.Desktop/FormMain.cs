@@ -14,10 +14,13 @@ namespace UI.Desktop
 {
     public partial class FormMain : Form
     {
+        public static List<ExactChar> ExactCharList;
+
         public FormMain()
         {
             InitializeComponent();
-        }
+            ExactCharList = new List<ExactChar>();
+        }   
 
         private void cboxChars_CheckedChanged(object sender, EventArgs e)
         {
@@ -54,6 +57,8 @@ namespace UI.Desktop
 
             FormExactChar form = new FormExactChar((int)nudMaxPasswordLength.Value);
             form.ShowDialog();
+
+            this.txtExactChar.Text = ExactChar.ToString(ExactCharList);
         }
     }
 }

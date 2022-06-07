@@ -22,7 +22,7 @@ namespace UI.Desktop
             this.flowLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             List<ExactChar> list = new List<ExactChar>();
 
@@ -34,9 +34,32 @@ namespace UI.Desktop
                 var tb = subPanel.Controls.Find(string.Format("txtExactChar{0}", i++), false).FirstOrDefault();
                 if (tb is TextBox)
                 {
+                    if (!string.IsNullOrEmpty(tb.Text))
+                    {
+                        tb.Text = removeDuplicates(tb.Text);
+                    }
+
                     list.Add(new ExactChar((int)tb.Tag, tb.Text));
                 }
             }
+
+            FormMain.ExactCharList = list;
+            this.Close();
+        }
+
+        private string removeDuplicates(string text)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (!sb.ToString().Contains(text[i]))
+                {
+                    sb.Append(text[i]);
+                }
+            }
+
+            return sb.ToString();
         }
 
         private void setup(int Count)
@@ -54,6 +77,10 @@ namespace UI.Desktop
                 tb.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 tb.Tag = i;
                 tb.Name = string.Format("txtExactChar{0}", i);
+                if (FormMain.ExactCharList.Any() && FormMain.ExactCharList.Count > i)
+                {
+                    tb.Text = FormMain.ExactCharList[i].Chars;
+                }
 
                 Label lbl = new Label();
                 lbl.Text = (i + 1).ToString();
