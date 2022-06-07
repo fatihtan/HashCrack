@@ -1,0 +1,11 @@
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\bin\Debug\UI.Desktop.exe.config
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\bin\Debug\UI.Desktop.exe
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\bin\Debug\UI.Desktop.pdb
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.csprojResolveAssemblyReference.cache
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.FormMain.resources
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.Properties.Resources.resources
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.exe
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.pdb
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\bin\Debug\Core.dll
+C:\Users\FT\Documents\Visual Studio 2012\Projects\Products\HashCrack\UI.Desktop\bin\Debug\Core.pdb
