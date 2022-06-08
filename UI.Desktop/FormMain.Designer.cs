@@ -50,6 +50,8 @@
             this.cboxExactChar = new System.Windows.Forms.CheckBox();
             this.txtExactChar = new System.Windows.Forms.TextBox();
             this.btnSetExactChar = new System.Windows.Forms.Button();
+            this.btnComputeTryCount = new System.Windows.Forms.Button();
+            this.btnMachineTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinPasswordLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxPasswordLength)).BeginInit();
             this.SuspendLayout();
@@ -147,7 +149,7 @@
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Location = new System.Drawing.Point(160, 360);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(618, 32);
+            this.btnStart.Size = new System.Drawing.Size(134, 32);
             this.btnStart.TabIndex = 8;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -302,12 +304,40 @@
             this.btnSetExactChar.UseVisualStyleBackColor = true;
             this.btnSetExactChar.Click += new System.EventHandler(this.btnSetExactChar_Click);
             // 
+            // btnComputeTryCount
+            // 
+            this.btnComputeTryCount.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnComputeTryCount.FlatAppearance.BorderSize = 0;
+            this.btnComputeTryCount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComputeTryCount.Location = new System.Drawing.Point(300, 360);
+            this.btnComputeTryCount.Name = "btnComputeTryCount";
+            this.btnComputeTryCount.Size = new System.Drawing.Size(134, 32);
+            this.btnComputeTryCount.TabIndex = 23;
+            this.btnComputeTryCount.Text = "Compute Try Count";
+            this.btnComputeTryCount.UseVisualStyleBackColor = false;
+            this.btnComputeTryCount.Click += new System.EventHandler(this.btnComputeTryCount_Click);
+            // 
+            // btnMachineTest
+            // 
+            this.btnMachineTest.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnMachineTest.FlatAppearance.BorderSize = 0;
+            this.btnMachineTest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMachineTest.Location = new System.Drawing.Point(671, 558);
+            this.btnMachineTest.Name = "btnMachineTest";
+            this.btnMachineTest.Size = new System.Drawing.Size(134, 32);
+            this.btnMachineTest.TabIndex = 24;
+            this.btnMachineTest.Text = "Machine Test";
+            this.btnMachineTest.UseVisualStyleBackColor = false;
+            this.btnMachineTest.Click += new System.EventHandler(this.btnMachineTest_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(817, 602);
+            this.Controls.Add(this.btnMachineTest);
+            this.Controls.Add(this.btnComputeTryCount);
             this.Controls.Add(this.btnSetExactChar);
             this.Controls.Add(this.txtExactChar);
             this.Controls.Add(this.cboxExactChar);
@@ -366,6 +396,8 @@
         private System.Windows.Forms.CheckBox cboxExactChar;
         private System.Windows.Forms.TextBox txtExactChar;
         private System.Windows.Forms.Button btnSetExactChar;
+        private System.Windows.Forms.Button btnComputeTryCount;
+        private System.Windows.Forms.Button btnMachineTest;
     }
 }
 

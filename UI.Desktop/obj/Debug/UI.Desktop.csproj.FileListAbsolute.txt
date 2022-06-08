@@ -22,3 +22,4 @@ C:\Users\FT\Documents\GitHub\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.Propertie
 C:\Users\FT\Documents\GitHub\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.csproj.GenerateResource.Cache
 C:\Users\FT\Documents\GitHub\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.Layouts.OneCharPanel.resources
 C:\Users\FT\Documents\GitHub\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.FormExactChar.resources
+C:\Users\FT\Documents\GitHub\HashCrack\UI.Desktop\obj\Debug\UI.Desktop.FormMachineTest.resources

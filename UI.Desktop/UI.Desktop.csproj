@@ -50,6 +50,12 @@
     <Compile Include="FormExactChar.Designer.cs">
       <DependentUpon>FormExactChar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMachineTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMachineTest.Designer.cs">
+      <DependentUpon>FormMachineTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormExactChar.resx">
       <DependentUpon>FormExactChar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMachineTest.resx">
+      <DependentUpon>FormMachineTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
