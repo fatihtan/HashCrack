@@ -12,14 +12,14 @@ namespace Core
         public string Output { get; set; }
         public int MinPasswordLength { get; set; }
         public int MaxPasswordLength { get; set; }
-        public bool IncludeExactChar { get; set; }
+        public bool IsExactCharDefined { get; set; }
         public List<ExactChar> ExactCharList { get; set; }
         public bool IncludeCharsBigAZ { get; set; }
         public string CharsBigAZ { get; set; }
         public bool IncludeCharsSmallAZ { get; set; }
         public string CharsSmallAZ { get; set; }
         public bool IncludeCharsNumbers { get; set; }
-        public string CharsNumbers { get; set; }
+        public string IncludeNumbers { get; set; }
         public bool IncludeSpace { get; set; }
         public bool IncludeAdditionalChars { get; set; }
         public string AdditionalChars { get; set; }
