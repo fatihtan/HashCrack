@@ -15,11 +15,14 @@ namespace UI.Desktop
     public partial class FormMain : Form
     {
         public static List<ExactChar> ExactCharList;
+        private readonly ISettingsService _iSettingsService;
 
         public FormMain()
         {
             InitializeComponent();
+            
             ExactCharList = new List<ExactChar>();
+            this._iSettingsService = new SettingsService();
         }   
 
         private void cboxChars_CheckedChanged(object sender, EventArgs e)
@@ -59,6 +62,40 @@ namespace UI.Desktop
             form.ShowDialog();
 
             this.txtExactChar.Text = ExactChar.ToString(ExactCharList);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.FileName = string.Format("hash-crack-{0}.txt", DateTime.UtcNow.ToString("yyyy-MM-dd HH.mm.ss.fff"));
+            sfd.Filter = "Text Files|*.txt";
+            DialogResult dr = sfd.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                
+                //this._iSettingsService.Save();
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private Settings PackSettings()
+        {
+            Settings settings = new Settings();
+
+            settings.TKEncrytionAlgorithm = (TK.TKEncrytionAlgorithm)((TypeValue)cboxEncryptionAlgorithm.SelectedItem).Value;
+            settings.Output = txtOutput.Text;
+            settings.MinPasswordLength = Convert.ToInt32(nudMinPasswordLength.Value);
+            settings.MaxPasswordLength = Convert.ToInt32(nudMaxPasswordLength.Value);
+            settings.IsExactCharDefined = cboxExactChar.Checked;
+            settings.ExactCharList = ExactCharList;
+            settings.IncludeCharsBigAZ = cboxCharsBigAZ.Checked;
+            settings.IncludeCharsSmallAZ = cboxCharsSmallAZ.Checked;
+
+            return settings;
         }
     }
 }

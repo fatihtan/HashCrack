@@ -86,13 +86,14 @@ namespace UI.Desktop
                 lbl.Text = (i + 1).ToString();
                 lbl.Size = new System.Drawing.Size(10, 40);
                 lbl.TextAlign = ContentAlignment.MiddleCenter;
-                lbl.BackColor = Color.Yellow;
+                lbl.BackColor = Color.Gray;
                 lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbl.ForeColor = Color.White;
 
                 subPanel.Controls.Add(lbl);
                 subPanel.Controls.Add(tb);
 
-                subPanel.BackColor = Color.Red;
+                subPanel.BackColor = Color.Gray;
                 subPanel.Location = new Point(i + 1, 0);
                 
                 subPanel.Size = new System.Drawing.Size(54, 40);

@@ -36,7 +36,7 @@
             this.txtCharsNumbers = new System.Windows.Forms.TextBox();
             this.cboxCharsAdditional = new System.Windows.Forms.CheckBox();
             this.txtCharsAdditional = new System.Windows.Forms.TextBox();
-            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStartBruteForce = new System.Windows.Forms.Button();
             this.cboxEncryptionAlgorithm = new System.Windows.Forms.ComboBox();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.lblEncryptionAlgorithm = new System.Windows.Forms.Label();
@@ -50,6 +50,9 @@
             this.cboxExactChar = new System.Windows.Forms.CheckBox();
             this.txtExactChar = new System.Windows.Forms.TextBox();
             this.btnSetExactChar = new System.Windows.Forms.Button();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinPasswordLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxPasswordLength)).BeginInit();
             this.SuspendLayout();
@@ -140,18 +143,18 @@
             this.txtCharsAdditional.Size = new System.Drawing.Size(618, 20);
             this.txtCharsAdditional.TabIndex = 6;
             // 
-            // btnStart
+            // btnStartBruteForce
             // 
-            this.btnStart.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Location = new System.Drawing.Point(160, 360);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(618, 32);
-            this.btnStart.TabIndex = 8;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnStartBruteForce.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnStartBruteForce.FlatAppearance.BorderSize = 0;
+            this.btnStartBruteForce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartBruteForce.Location = new System.Drawing.Point(160, 360);
+            this.btnStartBruteForce.Name = "btnStartBruteForce";
+            this.btnStartBruteForce.Size = new System.Drawing.Size(142, 32);
+            this.btnStartBruteForce.TabIndex = 8;
+            this.btnStartBruteForce.Text = "Start Brute Force";
+            this.btnStartBruteForce.UseVisualStyleBackColor = false;
+            this.btnStartBruteForce.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // cboxEncryptionAlgorithm
             // 
@@ -302,12 +305,53 @@
             this.btnSetExactChar.UseVisualStyleBackColor = true;
             this.btnSetExactChar.Click += new System.EventHandler(this.btnSetExactChar_Click);
             // 
+            // btnCalculate
+            // 
+            this.btnCalculate.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnCalculate.FlatAppearance.BorderSize = 0;
+            this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalculate.Location = new System.Drawing.Point(318, 360);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(142, 32);
+            this.btnCalculate.TabIndex = 23;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = false;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnLoad.FlatAppearance.BorderSize = 0;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Location = new System.Drawing.Point(476, 360);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(142, 32);
+            this.btnLoad.TabIndex = 24;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(636, 360);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(142, 32);
+            this.btnSave.TabIndex = 25;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
             this.ClientSize = new System.Drawing.Size(817, 602);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnLoad);
+            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.btnSetExactChar);
             this.Controls.Add(this.txtExactChar);
             this.Controls.Add(this.cboxExactChar);
@@ -321,7 +365,7 @@
             this.Controls.Add(this.lblEncryptionAlgorithm);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.cboxEncryptionAlgorithm);
-            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.btnStartBruteForce);
             this.Controls.Add(this.cboxCharsAdditional);
             this.Controls.Add(this.txtCharsAdditional);
             this.Controls.Add(this.cboxCharsNumbers);
@@ -352,7 +396,7 @@
         private System.Windows.Forms.TextBox txtCharsNumbers;
         private System.Windows.Forms.CheckBox cboxCharsAdditional;
         private System.Windows.Forms.TextBox txtCharsAdditional;
-        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStartBruteForce;
         private System.Windows.Forms.ComboBox cboxEncryptionAlgorithm;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Label lblEncryptionAlgorithm;
@@ -366,6 +410,9 @@
         private System.Windows.Forms.CheckBox cboxExactChar;
         private System.Windows.Forms.TextBox txtExactChar;
         private System.Windows.Forms.Button btnSetExactChar;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

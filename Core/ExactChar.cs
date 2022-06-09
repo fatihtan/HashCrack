@@ -13,7 +13,7 @@ namespace Core
 
         public ExactChar()
         {
-
+            this.Chars = string.Empty;
         }
 
         public ExactChar(int Index, string Chars)
@@ -24,14 +24,7 @@ namespace Core
 
         public override string ToString()
         {
-            if (string.IsNullOrEmpty(this.Chars))
-            {
-                return string.Format("[{0}:( )]", this.Index);
-            }
-            else
-            {
-                return string.Format("[{0}:({1})]", this.Index, this.Chars);
-            }
+            return string.Format("[{0}:({1})]", this.Index, this.Chars);
         }
 
         public static string ToString(List<ExactChar> list)
@@ -53,6 +46,23 @@ namespace Core
             sb.Append("}");
 
             return sb.ToString();
+        }
+
+        public static List<ExactChar> ToList(string rawData)
+        {
+            List<ExactChar> list = new List<ExactChar>();
+
+            rawData = rawData.Replace("{", "").Replace("}", "");
+            var dataList = rawData.Split(new char[] { ',', ' ' });
+            foreach (var item in dataList)
+            {
+                string tempItem = item.Replace("[", "").Replace("]", "");
+                string []parts = tempItem.Split(':');
+
+                list.Add(new ExactChar(Convert.ToInt32(parts[0]), parts[1].Replace("(", "").Replace(")", "")));
+            }
+
+            return list;
         }
     }
 }

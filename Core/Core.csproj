@@ -40,7 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExactChar.cs" />
+    <Compile Include="ISettingsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SettingsService.cs" />
     <Compile Include="TK.cs" />
     <Compile Include="TypeService.cs" />
     <Compile Include="TypeValue.cs" />
