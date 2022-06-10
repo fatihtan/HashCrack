@@ -19,7 +19,7 @@ namespace Core
         public bool IncludeCharsSmallAZ { get; set; }
         public string CharsSmallAZ { get; set; }
         public bool IncludeCharsNumbers { get; set; }
-        public string CharNumbers { get; set; }
+        public string CharsNumbers { get; set; }
         public bool IncludeSpace { get; set; }
         public bool IncludeAdditionalChars { get; set; }
         public string AdditionalChars { get; set; }
@@ -40,7 +40,7 @@ namespace Core
 
             if (settings.IncludeCharsNumbers)
             {
-                list.AddRange(settings.CharNumbers);
+                list.AddRange(settings.CharsNumbers);
             }
 
             if (settings.IncludeSpace)
