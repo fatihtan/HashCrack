@@ -21,7 +21,7 @@ namespace Core
             writer.WriteLine(string.Format("ExactCharList:{0}", ExactChar.ToString(settings.ExactCharList)));
             writer.WriteLine(string.Format("IncludeCharsBigAZ:{0}", settings.IncludeCharsBigAZ));
             writer.WriteLine(string.Format("IncludeCharsSmallAZ:{0}", settings.IncludeCharsSmallAZ));
-            writer.WriteLine(string.Format("IncludeNumbers:{0}", settings.IncludeNumbers));
+            writer.WriteLine(string.Format("IncludeNumbers:{0}", settings.CharNumbers));
             writer.WriteLine(string.Format("IncludeSpace:{0}", settings.IncludeSpace));
             writer.WriteLine(string.Format("IncludeAdditionalChars:{0}", settings.IncludeAdditionalChars));
             writer.WriteLine(string.Format("AdditionalChars:{0}", settings.AdditionalChars));
@@ -46,7 +46,7 @@ namespace Core
             settings.ExactCharList = ExactChar.ToList(reader.ReadLine().Split(':')[1]);
             settings.IncludeCharsBigAZ = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
             settings.IncludeCharsSmallAZ = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
-            settings.IncludeNumbers = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
+            settings.CharNumbers = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
             settings.IncludeSpace = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
             settings.IncludeAdditionalChars = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
             settings.AdditionalChars = reader.ReadLine().Split(':')[1];
