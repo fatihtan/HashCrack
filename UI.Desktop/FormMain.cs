@@ -72,8 +72,11 @@ namespace UI.Desktop
             DialogResult dr = sfd.ShowDialog();
             if (dr == System.Windows.Forms.DialogResult.OK)
             {
-                
-                //this._iSettingsService.Save();
+                Settings settings = this.PackSettings();
+                if (this._iSettingsService.Save(settings, sfd.FileName))
+                {
+                    MessageBox.Show("File has been saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -90,12 +93,29 @@ namespace UI.Desktop
             settings.Output = txtOutput.Text;
             settings.MinPasswordLength = Convert.ToInt32(nudMinPasswordLength.Value);
             settings.MaxPasswordLength = Convert.ToInt32(nudMaxPasswordLength.Value);
+            
             settings.IsExactCharDefined = cboxExactChar.Checked;
             settings.ExactCharList = ExactCharList;
+            
             settings.IncludeCharsBigAZ = cboxCharsBigAZ.Checked;
+            settings.CharsBigAZ = txtCharsBigAZ.Text;
+
             settings.IncludeCharsSmallAZ = cboxCharsSmallAZ.Checked;
+            settings.CharsSmallAZ = txtCharsSmallAZ.Text;
+
+            settings.IncludeCharsNumbers = cboxCharsNumbers.Checked;
+            settings.CharsNumbers = txtCharsNumbers.Text;
+
+            settings.IncludeSpace = cboxIncludeSpace.Checked;
+            settings.IncludeCharsAdditional = cboxIncludeCharsAdditional.Checked;
+            settings.CharsAdditional = txtCharsAdditional.Text;
 
             return settings;
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

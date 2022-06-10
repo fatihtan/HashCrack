@@ -32,8 +32,8 @@ namespace Core
             
             writer.WriteLine(string.Format("IncludeSpace:{0}", settings.IncludeSpace));
             
-            writer.WriteLine(string.Format("IncludeAdditionalChars:{0}", settings.IncludeAdditionalChars));
-            writer.WriteLine(string.Format("AdditionalChars:{0}", settings.AdditionalChars));
+            writer.WriteLine(string.Format("IncludeCharsAdditional:{0}", settings.IncludeCharsAdditional));
+            writer.WriteLine(string.Format("CharsAdditional:{0}", settings.CharsAdditional));
 
             writer.Close();
 
@@ -67,8 +67,8 @@ namespace Core
 
             settings.IncludeSpace = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
 
-            settings.IncludeAdditionalChars = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
-            settings.AdditionalChars = reader.ReadLine().Split(':')[1];
+            settings.IncludeCharsAdditional = Convert.ToBoolean(reader.ReadLine().Split(':')[1]);
+            settings.CharsAdditional = reader.ReadLine().Split(':')[1];
             
             return settings;
         }

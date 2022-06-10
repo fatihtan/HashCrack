@@ -34,7 +34,7 @@
             this.cboxCharsSmallAZ = new System.Windows.Forms.CheckBox();
             this.cboxCharsNumbers = new System.Windows.Forms.CheckBox();
             this.txtCharsNumbers = new System.Windows.Forms.TextBox();
-            this.cboxCharsAdditional = new System.Windows.Forms.CheckBox();
+            this.cboxIncludeCharsAdditional = new System.Windows.Forms.CheckBox();
             this.txtCharsAdditional = new System.Windows.Forms.TextBox();
             this.btnStartBruteForce = new System.Windows.Forms.Button();
             this.cboxEncryptionAlgorithm = new System.Windows.Forms.ComboBox();
@@ -123,17 +123,17 @@
             this.txtCharsNumbers.TabIndex = 4;
             this.txtCharsNumbers.Text = "0123456789";
             // 
-            // cboxCharsAdditional
+            // cboxIncludeCharsAdditional
             // 
-            this.cboxCharsAdditional.AutoSize = true;
-            this.cboxCharsAdditional.Location = new System.Drawing.Point(41, 325);
-            this.cboxCharsAdditional.Name = "cboxCharsAdditional";
-            this.cboxCharsAdditional.Size = new System.Drawing.Size(102, 17);
-            this.cboxCharsAdditional.TabIndex = 7;
-            this.cboxCharsAdditional.Tag = "txtCharsAdditional";
-            this.cboxCharsAdditional.Text = "Additional Chars";
-            this.cboxCharsAdditional.UseVisualStyleBackColor = true;
-            this.cboxCharsAdditional.CheckedChanged += new System.EventHandler(this.cboxChars_CheckedChanged);
+            this.cboxIncludeCharsAdditional.AutoSize = true;
+            this.cboxIncludeCharsAdditional.Location = new System.Drawing.Point(41, 325);
+            this.cboxIncludeCharsAdditional.Name = "cboxIncludeCharsAdditional";
+            this.cboxIncludeCharsAdditional.Size = new System.Drawing.Size(102, 17);
+            this.cboxIncludeCharsAdditional.TabIndex = 7;
+            this.cboxIncludeCharsAdditional.Tag = "txtCharsAdditional";
+            this.cboxIncludeCharsAdditional.Text = "Additional Chars";
+            this.cboxIncludeCharsAdditional.UseVisualStyleBackColor = true;
+            this.cboxIncludeCharsAdditional.CheckedChanged += new System.EventHandler(this.cboxChars_CheckedChanged);
             // 
             // txtCharsAdditional
             // 
@@ -316,6 +316,7 @@
             this.btnCalculate.TabIndex = 23;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnLoad
             // 
@@ -366,7 +367,7 @@
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.cboxEncryptionAlgorithm);
             this.Controls.Add(this.btnStartBruteForce);
-            this.Controls.Add(this.cboxCharsAdditional);
+            this.Controls.Add(this.cboxIncludeCharsAdditional);
             this.Controls.Add(this.txtCharsAdditional);
             this.Controls.Add(this.cboxCharsNumbers);
             this.Controls.Add(this.txtCharsNumbers);
@@ -394,7 +395,7 @@
         private System.Windows.Forms.CheckBox cboxCharsSmallAZ;
         private System.Windows.Forms.CheckBox cboxCharsNumbers;
         private System.Windows.Forms.TextBox txtCharsNumbers;
-        private System.Windows.Forms.CheckBox cboxCharsAdditional;
+        private System.Windows.Forms.CheckBox cboxIncludeCharsAdditional;
         private System.Windows.Forms.TextBox txtCharsAdditional;
         private System.Windows.Forms.Button btnStartBruteForce;
         private System.Windows.Forms.ComboBox cboxEncryptionAlgorithm;

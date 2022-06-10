@@ -21,8 +21,8 @@ namespace Core
         public bool IncludeCharsNumbers { get; set; }
         public string CharsNumbers { get; set; }
         public bool IncludeSpace { get; set; }
-        public bool IncludeAdditionalChars { get; set; }
-        public string AdditionalChars { get; set; }
+        public bool IncludeCharsAdditional { get; set; }
+        public string CharsAdditional { get; set; }
 
         public static List<char> GetChars(Settings settings)
         {
@@ -48,9 +48,9 @@ namespace Core
                 list.Add(' ');
             }
 
-            if (settings.IncludeAdditionalChars)
+            if (settings.IncludeCharsAdditional)
             {
-                list.AddRange(settings.AdditionalChars);
+                list.AddRange(settings.CharsAdditional);
             }
 
             return list;
