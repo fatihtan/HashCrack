@@ -82,7 +82,28 @@ namespace UI.Desktop
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Text Files|*.txt";
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == System.Windows.Forms.DialogResult.OK)
+            {
+                Settings settings = this._iSettingsService.Load(ofd.FileName);
+                if (settings == null)
+                {
+                    MessageBox.Show("File could not be opened.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+
+            }
+        }
+
+        private void LoadSettings(Settings settings)
+        {
+            cboxEncryptionAlgorithm.SelectedItem = settings.TKEncrytionAlgorithm;
+            txtOutput.Text = settings.Output;
+            nudMinPasswordLength.Value = settings.MinPasswordLength;
+            nudMaxPasswordLength.Value = settings.MaxPasswordLength;
         }
 
         private Settings PackSettings()
