@@ -94,7 +94,7 @@ namespace UI.Desktop
                     return;
                 }
 
-
+                LoadSettings(settings);
             }
         }
 
